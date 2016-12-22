@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../favicon.ico">
+    <title>FB Responder - Autoresponder de notificações para Facebook</title>
+    <!-- Bootstrap core CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines!-->
+    <!--if lt IE 9
+    script(src='../../assets/js/ie8-responsive-file-warning.js')
+    script(src='../../assets/js/ie-emulation-modes-warning.js')
+    -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    -->
+  </head>
+  <body class="intern">
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-fbr">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbar .dropdown" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Mudar navegação</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">FB Responder</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <div class="profile dropdown navbar-right"><img src="images/profile.png" alt="Kevin Couto">
+            <button id="dropdownMenu1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Kevin Couto <span class="caret"></span></button>
+            <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+              <li><a href="#">Meu Perfil</a></li>
+              <li><a href="#">Configurações</a></li>
+              <li><a href="#">Alterar Senha</a></li>
+              <li><a href="#">Sair</a></li>
+            </ul>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contato.html" class="active">Contatos</a></li>
+            <li><a href="capturas.html">Capturas</a></li>
+            <li><a href="notificacao.html">Campanhas</a></li>
+            <li><a href="campanha.html">Automação</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container-fluid sub-navbar">
+        <div class="contato-btn fbr-btn"><a href="#">Todos os Apps</a>
+          <div class="btn-group sidebar-btn caret-btn">
+            <button id="dropdown-notificacao" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+            <ul aria-labelledby="dropdown-notificacao" class="dropdown-menu">
+              <li><a href="#">Curso de Front-end</a></li>
+              <li><a href="#">Curso de vendas</a></li>
+              <li><a href="#">Relacionamento</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="contato-btn btn-icon pop fbr-btn"><a href="#"><i class="fa fa-users"> </i>Nova Notificação</a></div>
+        <div class="contato-btn btn-icon user fbr-btn"><a href="#"><i class="fa fa-user"> </i>Criar Captura</a></div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 sidebar intern-sidebar">
+          <!-- Single button-->
+          <h2>Personalize sua tabela</h2>
+          <h3 class="sidebar-title first-filter">Filtar por público</h3>
+          <div id="dropPublic">
+            <button id="dropdownActions" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-left: 0; margin-top: 5px" class="dropdownFiltrar">Selecione um público <span class="caret"></span></button>
+            <ul aria-labelledby="dropdownActions" class="dropdown-menu public-dropdown">
+              <li><a href="#">Campanha #FL 2.0</a></li>
+              <li><a href="#">PPL #1 - Vendas</a></li>
+              <li><a href="#">Lançamento Novo Conceito</a></li>
+            </ul>
+          </div>
+          <h3 class="sidebar-title">Filtar por TAGs</h3>
+          <input type="text" placeholder="Pesquisar TAG..." class="input-fbr fbr-search"><br>
+          <p class="sidebar-paragraph">
+            <input type="checkbox"> Obrigatório estar em todas as TAGs
+          </p>
+          <ul>
+            <li><a href="#">Teste hehe <span>x</span></a></li>
+            <li><a href="#">Teste hehe <span>x</span></a></li>
+          </ul>
+          <h3 class="sidebar-title">Filtar por TAGs Negativas</h3>
+          <input type="text" placeholder="Pesquisar TAG..." class="input-fbr fbr-search"><br>
+          <p class="sidebar-paragraph">
+            <input type="checkbox"> Obrigatório estar em todas as TAGs
+          </p>
+          <ul>
+            <li><a href="#">Teste hehe <span>x</span></a></li>
+            <li><a href="#">Teste hehe <span>x</span></a></li>
+          </ul>
+          <h3 class="sidebar-title">Quantidade por página</h3>
+          <input type="range" class="range-contatos"><span class="range">Exibindo: 10 de 20</span>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-9 col-xs-12 col-md-offset-3 main main-intern">
+          <div class="col-md-5 col-sm-12">
+            <h1 class="main-title-intern">Todos os Contatos</h1>
+          </div>
+          
+          <div class="col-md-12 col-sm-12">
+            <div style="margin-top: 0" class="bar notificacao-bar table-fbr table-fbr-contatos">
+              <div class="table-responsive">
+                <table class="table table-striped fbr-table">
+                  <thead class="title-bar">
+                    <tr>
+                      <th>
+                        <input type="checkbox">
+                      </th>
+                      <th>Nome</th>
+                      <th>E-mail</th>
+                      <th>Qtde cliques</th>
+                      <th> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>Fagner Borges</td>
+                      <td>fagner@fbresoponder.com.br</td>
+                      <td>10</td>
+                      <td><i class="fa fa-gear"></i></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>Elton FBR</td>
+                      <td>elton@fbresoponder.com.br</td>
+                      <td>11</td>
+                      <td><i class="fa fa-gear"></i></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>Rodrigo FBR</td>
+                      <td>rodrigo@fbresoponder.com.br</td>
+                      <td>20</td>
+                      <td> <i class="fa fa-gear"></i></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>Dyego de Andrade</td>
+                      <td>diego@fbresoponder.com.br</td>
+                      <td>3</td>
+                      <td><i class="fa fa-gear"></i></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>Kevin Couto</td>
+                      <td>kevin@staleiro.com</td>
+                      <td>8</td>
+                      <td><i class="fa fa-gear"></i></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>Fagner Borges</td>
+                      <td>fagner@fbresoponder.com.br</td>
+                      <td>10</td>
+                      <td><i class="fa fa-gear"></i></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>Elton FBR</td>
+                      <td>elton@fbresoponder.com.br</td>
+                      <td>11</td>
+                      <td><i class="fa fa-gear"></i></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>Rodrigo FBR</td>
+                      <td>rodrigo@fbresoponder.com.br</td>
+                      <td>20</td>
+                      <td> <i class="fa fa-gear"></i></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>Dyego de Andrade</td>
+                      <td>diego@fbresoponder.com.br</td>
+                      <td>3</td>
+                      <td><i class="fa fa-gear"></i></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="checkbox">
+                      </td>
+                      <td>Kevin Couto</td>
+                      <td>kevin@staleiro.com</td>
+                      <td>8</td>
+                      <td><i class="fa fa-gear"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    Bootstrap core JavaScript
+    ==================================================
+    -->
+    <!-- Placed at the end of the document so the pages load faster-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line!-->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug-->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+      $('#dropdownMenu1').dropdown()
+      $('#dropdown-notificacao').dropdown()
+      $('#dropdownActions').dropdown()
+      $('#dropdownOrder').dropdown()
+    </script>
+  </body>
+</html>

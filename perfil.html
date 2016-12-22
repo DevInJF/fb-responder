@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../favicon.ico">
+    <title>FB Responder - Autoresponder de notificações para Facebook</title>
+    <!-- Bootstrap core CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines!-->
+    <!--if lt IE 9
+    script(src='../../assets/js/ie8-responsive-file-warning.js')
+    script(src='../../assets/js/ie-emulation-modes-warning.js')
+    -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    -->
+  </head>
+  
+  <body class="intern">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-fbr">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbar .dropdown" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Mudar navegação</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">FB Responder</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <div class="profile dropdown navbar-right"><img src="images/profile.png" alt="Kevin Couto">
+            <button id="dropdownMenu1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Kevin Couto <span class="caret"></span></button>
+            <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+              <li><a href="#">Meu Perfil</a></li>
+              <li><a href="#">Configurações</a></li>
+              <li><a href="#">Alterar Senha</a></li>
+              <li><a href="#">Sair</a></li>
+            </ul>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contato.html" class="active">Contatos</a></li>
+            <li><a href="capturas.html">Capturas</a></li>
+            <li><a href="notificacao.html">Campanhas</a></li>
+            <li><a href="campanha.html">Automação</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container-fluid sub-navbar">
+        <div class="contato-btn fbr-btn"><a href="#">Todos os Apps</a>
+          <div class="btn-group sidebar-btn caret-btn">
+            <button id="dropdown-notificacao" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+            <ul aria-labelledby="dropdown-notificacao" class="dropdown-menu">
+              <li><a href="#">Curso de Front-end</a></li>
+              <li><a href="#">Curso de vendas</a></li>
+              <li><a href="#">Relacionamento</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="contato-btn btn-icon pop fbr-btn"><a href="#"><i class="fa fa-users"> </i>Gerenciar Contatos</a></div>
+        <div class="contato-btn btn-icon user fbr-btn"><a href="#"><i class="fa fa-user"> </i>Criar Captura</a></div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 sidebar intern-sidebar">
+          <div class="personal-profile">
+            <img src="images/personal-profile.png" alt="">
+            <h2>Kevin Couto</h2>
+          </div>
+          <div class="tags-profile">
+            <h3 class="sidebar-title">As tags do usuário</h3>
+            <a href="#" class="tags">curso-front-end</a>
+            <a href="#" class="tags">educacao</a>
+            <a href="#" class="tags">lancamento-1</a>
+            <a href="#" class="tags">lancamento-2</a>
+            <a href="#" class="tags">lancamento-1-funil-way</a>
+            <a href="#" class="tags">aloha-aca</a>
+            <input type="text" placeholder="Adicionar TAG..." class="input-fbr fbr-search">
+          </div>
+          <div class="app-profile">
+            <h3 class="sidebar-title">Os App do usuário</h3>
+            <ul class="app-usuario">
+              <li><a href="#"><img src="images/app1.png" alt="">Técnicas de Venda</a></li>
+              <li><a href="#"><img src="images/app1.png" alt="">Técnicas de Venda</a></li>
+              <li><a href="#"><img src="images/app1.png" alt="">Técnicas de Venda</a></li>
+            </ul>
+          </div>
+          <!-- Single button-->
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-9 col-xs-12 col-md-offset-3 main main-intern">
+          <div class="col-md-5 col-sm-12">
+            <h1 class="main-title-intern">Linha do Tempo</h1>
+          </div>
+          <div style="text-align: right" class="col-md-7 col-sm-12">
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default">Todos</button>
+              <button type="button" class="btn btn-default">Por TAGs</button>
+              <button type="button" class="btn btn-default">Por App</button>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12">
+               <div class="linha-lista" >
+                <div class="img-lista pull-left" >
+                  <img src="images/app1.png" alt="">
+                </div>
+                <div class="texto-lista pull-left">
+                  <p>Kevin abriu a notificação "Como fazer a diferença na sociedade - Parte 1"</p>
+                  <span>15 horas atrás - 07/06/2016</span>
+                </div>
+            </div>
+            <div class="linha-lista" >
+                <div class="img-lista pull-left" >
+                  <img src="images/app1.png" alt="">
+                </div>
+                <div class="texto-lista pull-left">
+                  <p>Kevin abriu a notificação "Como fazer a diferença na sociedade - Parte 1"</p>
+                  <span>15 horas atrás - 07/06/2016</span>
+                </div>
+            </div>
+            <div class="linha-lista" >
+                <div class="img-lista pull-left" >
+                  <img src="images/app1.png" alt="">
+                </div>
+                <div class="texto-lista pull-left">
+                  <p>Kevin abriu a notificação "Como fazer a diferença na sociedade - Parte 1"</p>
+                  <span>15 horas atrás - 07/06/2016</span>
+                </div>
+            </div>
+            <div class="linha-lista" >
+                <div class="img-lista pull-left" >
+                  <img src="images/app1.png" alt="">
+                </div>
+                <div class="texto-lista pull-left">
+                  <p>Kevin abriu a notificação "Como fazer a diferença na sociedade - Parte 1"</p>
+                  <span>15 horas atrás - 07/06/2016</span>
+                </div>
+            </div>
+            <div class="linha-lista" >
+                <div class="img-lista pull-left" >
+                  <img src="images/app1.png" alt="">
+                </div>
+                <div class="texto-lista pull-left">
+                  <p>Kevin abriu a notificação "Como fazer a diferença na sociedade - Parte 1"</p>
+                  <span>15 horas atrás - 07/06/2016</span>
+                </div>
+            </div>
+<!-- 
+            <div style="margin-top: 0" class="bar notificacao-bar table-fbr table-fbr-contatos">
+
+              <div>
+                <div class="img-lista pull-left" >
+                  <img src="images/app1.png" alt="">
+                </div>
+                <div class="texto.lista ">
+                  <p>Kevin abriu a notificação "Como fazer a diferença na sociedade - Parte 1"</p>
+                  <span>15 horas atrás - 07/06/2016</span>
+                </div>
+
+              </div>
+
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    Bootstrap core JavaScript
+    ==================================================
+    -->
+    <!-- Placed at the end of the document so the pages load faster-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line!-->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug-->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+      $('#dropdownMenu1').dropdown()
+      $('#dropdown-notificacao').dropdown()
+      $('#dropdownActions').dropdown()
+      $('#dropdownOrder').dropdown()
+    </script>
+  </body>
+</html>

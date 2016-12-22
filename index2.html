@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../favicon.ico">
+    <title>FB Responder - Autoresponder de notificações para Facebook</title>
+    <!-- Bootstrap core CSS-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines!-->
+    <!--if lt IE 9script(src='../../assets/js/ie8-responsive-file-warning.js')
+    -->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    -->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-fbr">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbar .dropdown" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Mudar navegação</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">FB Responder</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <div class="profile dropdown navbar-right"><img src="images/profile.png" alt="Kevin Couto">
+            <button id="dropdownMenu1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Kevin Couto <span class="caret"></span></button>
+            <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+              <li><a href="#">Meu Perfil</a></li>
+              <li><a href="#">Configurações</a></li>
+              <li><a href="#">Alterar Senha</a></li>
+              <li><a href="#">Sair</a></li>
+            </ul>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="contato.html">Contatos</a></li>
+            <li><a href="capturas.html">Capturas</a></li>
+            <li><a href="notificacao.html">Campanhas</a></li>
+            <li><a href="campanha.html">Automação</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-3 sidebar">
+          <!-- Single button-->
+          <div id="new-dropdown" class="notificacao-btn fbr-btn"><a href="#">Nova Notificação</a>
+            <div class="btn-group sidebar-btn caret-btn">
+              <button id="dropdown-new" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Nova Campanha</a></li>
+                <li><a href="#">Novo Aplicativo</a></li>
+                <li><a href="#">Novo Contato</a></li>
+              </ul>
+            </div>
+          </div>
+          <h3 class="sidebar-title">
+             
+            Últimos Cadastrados  <a href="#" data-toggle="tooltip" data-placement="top" title="Listagem dos últimos cadastrados" class="tooltip-notify"><i class="fa fa-question-circle"> </i></a>
+          </h3><img src="images/faces/face1.jpg" alt="Face 1" class="faces"><img src="images/faces/face1.jpg" alt="Face 1" class="faces"><img src="images/faces/face1.jpg" alt="Face 1" class="faces"><img src="images/faces/face1.jpg" alt="Face 1" class="faces"><img src="images/faces/face1.jpg" alt="Face 1" class="faces"><img src="images/faces/face1.jpg" alt="Face 1" class="faces">
+          <h3 class="sidebar-title">Seus próximos envios <a href="#" data-toggle="tooltip" data-placement="top" title="Calendário com as datas dos próximos envios" class="tooltip-notify"><i class="fa fa-question-circle"> </i></a></h3>
+          <p>Não há envios agendados.  <a href="#">Criar uma nova notificação?</a></p>
+          <h3 class="sidebar-title">TAGs que estão bombando  <a href="#" data-toggle="tooltip" data-placement="top" title="TAGs mais utilizadas no último mês" class="tooltip-notify"><i class="fa fa-question-circle"> </i></a></h3><a href="#" class="tags">curso-front-end</a><a href="#" class="tags">educacao</a><a href="#" class="tags">lancamento-1</a><a href="#" class="tags">lancamento-2</a><a href="#" class="tags">lancamento-1-funil-way</a><a href="#" class="tags">aloha-aca</a>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main">
+          <div class="col-md-4"><a href="#" style="display: block">
+              <div class="info-boxes info-notificacao"><span class="info-number">10</span><span class="info-text">notificações clicadas do último envio</span></div></a></div>
+          <div class="col-md-4"><a href="index3.html" style="display: block">
+              <div class="info-boxes info-campanha"><span class="info-number">32</span><span class="info-text info-text-2">campanhas estão em andamento</span></div></a></div>
+          <div class="col-md-4"><a href="#" style="display: block">
+              <div class="info-boxes info-app"><span class="info-number">56</span><span class="info-text info-text-2">
+                   
+                  inscritos pelo app front-end</span></div></a></div>
+          <div class="col-md-12">
+            <div class="graph">
+              <h4>
+                 
+                Últimos <span style="color: green; text-decoration: underline">inscritos</span>
+              </h4>
+              <button id="dropdownInscritos" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Filtrar por TAGs <span class="caret"></span></button>
+              <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+                <li><a href="#">aloha-aca</a></li>
+                <li><a href="#">front-end</a></li>
+              </ul><img src="images/graph.png" alt="Gráficos dos ultimos incritos">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="bar notificacao-bar">
+              <div class="title-bar"> 
+                <h4>Notificações</h4>
+                <button>Nova</button>
+              </div>
+              <content-bar>
+                <ul>
+                  <li><a href="#">Participe do acampamento Be a Pro </a></li>
+                  <li><a href="#">PPL #2 - Participe do acampamento Be a Pro </a></li>
+                  <li><a href="#">PPL #3 - Participe e concorra a um iPad </a></li>
+                  <li><a href="#">Meu curso de vendas</a></li>
+                  <li><a href="#">Mensagem personalizada para cliente</a></li>
+                </ul>
+              </content-bar>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="bar campanha-bar">
+              <div class="title-bar"> 
+                <h4>Campanhas</h4>
+                <button type="button" data-toggle="modal" data-target="#campanha">Nova</button>
+              </div>
+              <content-bar>
+                <ul>
+                  <li><a href="#">Curso de Marketing e Vendas </a></li>
+                  <li><a href="#">Curso de Relacionamento</a></li>
+                  <li><a href="#">Curso de Pôker Ninja</a></li>
+                  <li><a href="#">Curso Relacionando-se</a></li>
+                </ul>
+              </content-bar>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="bar app-bar">
+              <div class="title-bar"> 
+                <h4>Aplicativos</h4>
+                <button>Novo</button>
+              </div>
+              <content-bar>
+                <ul>
+                  <li><a href="#">Marketing e Vendas </a></li>
+                  <li><a href="#">Relacionamento</a></li>
+                  <li><a href="#">Pôker</a></li>
+                  <li><a href="#">História Brasileira</a></li>
+                </ul>
+              </content-bar>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    Bootstrap core JavaScript
+    ==================================================
+    -->
+    <!-- Placed at the end of the document so the pages load faster-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line!-->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug-->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+      $('#dropdown-new').dropdown()
+      $('#dropdownMenu1').dropdown()
+      $('.tooltip-notify').tooltip()
+    </script>
+  </body>
+</html>
+<div id="campanha" style="background: none" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="main modal fade">
+  <div role="document" class="modal-dialog">
+    <div class="modal-content modal-fbr campanha-bar">
+      <div class="modal-header title-bar">
+        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+        <h4 id="myModalLabel" class="modal-title">Nova Campanha</h4>
+      </div>
+      <div class="modal-body body-bar">
+        <label>Nome da Campanha
+          <input type="text" placeholder="Ex: Notificação do cadastro" class="input-main-fbr">
+        </label>
+        <label>Enviar para usuários das TAGs
+          <input type="text" placeholder="Ex: vencedor, curso-vendas, vendas" class="input-main-fbr">
+        </label>
+        <label>Não enviar para usuários das TAGs
+          <input type="text" placeholder="Ex: vencedor, curso-vendas, vendas" class="input-main-fbr">
+        </label>
+        <label class="active-field"><a href="#"><i class="fa fa-calendar"></i>Autoresponder</a></label>
+        <label class="active-field"><a href="#"><i class="fa fa-paper-plane-o"></i>Notificações</a></label>
+      </div>
+      <div class="modal-footer footer-bar"><a href="#" class="contato-btn fbr-btn">Criar Campanha</a></div>
+    </div>
+  </div>
+</div>
